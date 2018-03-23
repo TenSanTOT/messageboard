@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>留言板</h1>
+    <header class="header">
+        <h1>留言板</h1>
+        <a href="{% url 'write' %}">留言</a>
+    </header>
     <ul>
         {% for post in object_list %}
-            <li>{{ post }}</li>
+            <li>
+                <p>{{ post.name }}</p>
+                <p>{{ post.text }}</p>
+                <span>{{post.date|date:'Y/m/d H:i'}}</span>
+            </li>
         {% endfor %}
     </ul>
 </body>
