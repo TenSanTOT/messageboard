@@ -1,9 +1,19 @@
-<a href="/">返回</a>
-
+{% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/post.css' %}"> {% endblock %} {% block content %}
 <div class="container">
+    <a href="/" class="go-back">返回首页</a>
     <form method="post">
         {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Save" />
+
+        <div class="fieldWrapper">
+            {{ field.errors }} {{ field.label_tag }}
+            <label for="id_text">留言内容：</label>
+            {{ form.text }}
+            <label for="id_name">留言者昵称：</label>
+            {{ form.name }}
+        </div>
+
+        <button type="submit" class="submit">发布<button/>
     </form>
 </div>
+{% endblock %}
