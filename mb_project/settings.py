@@ -3,10 +3,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k^1*m%%%*d!nr9go568e1yi&!hgx#sj=^*thqzm%4dp=$$(&)e'
 
-# DEBUG = False
-# ALLOWED_HOSTS = ['zackguo510.pythonanywhere.com']
-DEBUG = True
-ALLOWED_HOSTS = ['*']
+DEBUG = False
+ALLOWED_HOSTS = ['zackguo510.pythonanywhere.com']
+# DEBUG = True
+# ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
