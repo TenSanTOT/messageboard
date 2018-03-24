@@ -10,17 +10,21 @@
 }
 
 .container {
-	width: 70%;
+	width: 80%;
 	margin: 50px auto 0;
 }
 
 .go-back {
 	text-decoration: none;
+	text-align: center;
 	display: inline-block;
 	border: solid 1px #000;
-	padding: 5px 50px;
+	padding: 10px 0;
+	width: 20%;
 	margin-bottom: 50px;
 	font-size: 0.7em;
+	background: #152737;
+	color: #fff;
 }
 
 #id_text,
@@ -29,7 +33,7 @@
 	margin-bottom: 40px;
 	margin-top: 10px;
 	height: 40px;
-	width: 500px;
+	width: 100%;
 	padding-left: 9px;
 	outline: none;
 	border: solid 1px #000;
@@ -39,11 +43,24 @@ label {
 	font-size: 0.8em;
 }
 
-button.submit {
+.submit {
 	height: 40px;
-	width: 100px;
+	width: 20%;
 	background: none;
 	background-color: #17c698;
 	border: none;
 	color: #fff;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+	.go-back,
+	.submit {
+		width: 100%;
+	}
+
+	#id_text,
+	#id_name {
+		width: 100%;
+	}
 }

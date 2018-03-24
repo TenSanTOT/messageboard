@@ -11,7 +11,7 @@
 
 header,
 .container {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -35,7 +35,8 @@ header .big {
 	text-decoration: none;
 	font-size: 0.7em;
 	color: #fff;
-	padding: 0px 50px;
+	width: 20%;
+	text-align: center;
 	border-radius: 3px;
 	background-color: #17c698;
 }
@@ -54,4 +55,15 @@ li {
 	margin-top: 5px;
 	font-size: 0.7em;
 	color: #17c698;
+}
+
+@media screen and (max-width: 800px) {
+	.write {
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+	}
+	header {
+		flex-wrap: wrap;
+	}
 }
