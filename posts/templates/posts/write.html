@@ -1,10 +1,14 @@
-{% load static %} {% block css %}
-<link rel="stylesheet" href="{% static 'css/post.css' %}"> {% endblock %} {% block content %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/post.css' %}">
+{% endblock %} 
+
+{% block content %}
 <div class="container">
     <a href="/" class="go-back">返回首页</a>
     <form method="post">
         {% csrf_token %}
-
         <div class="fieldWrapper">
             {{ field.errors }} {{ field.label_tag }}
             <label for="id_text">留言内容：</label>
